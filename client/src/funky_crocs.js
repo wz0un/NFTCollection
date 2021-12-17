@@ -278,9 +278,9 @@ const setPrice = async () => {
 const setAddresses = async () => {
   const result = await contract.methods.setAddresses(
     [
-      "0x707e55a12557E89915D121932F83dEeEf09E5d70",
-      "0x707e55a12557E89915D121932F83dEeEf09E5d70",
-      "0x707e55a12557E89915D121932F83dEeEf09E5d70"
+      "0x6C71Ac976F811eA44c6eAE4a3Ea6C4435c74E52d",
+      "0x6C71Ac976F811eA44c6eAE4a3Ea6C4435c74E52d",
+      "0x6C71Ac976F811eA44c6eAE4a3Ea6C4435c74E52d"
     ]
     )
     .send({ from: accounts[0], gas: 0, value: 0 })
