@@ -20,7 +20,7 @@ contract Fedwa is ERC721Enumerable, Ownable {
     uint256 public price;
 
     // Maximum limit of tokens that can ever exist
-    uint256 public constant MAX_SUPPLY = 10000;
+    uint256 public constant MAX_SUPPLY = 20;
     uint256 public constant MAX_PRESALE_SUPPLY = 500;
     uint256 public constant MAX_MINT_PER_TX = 20;
 

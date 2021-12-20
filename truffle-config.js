@@ -23,7 +23,15 @@ module.exports = {
       },
       network_id: 1,
       skipDryRun: true,
-    }
+    },
+    // Hay que revisarlo
+    // poligon: {
+    //   provider: function () {
+    //     return new HDWalletProvider(process.env.PRIVATE_KEY, process.env.MAINNET_RPC_URL);
+    //   },
+    //   network_id: 134,
+    //   skipDryRun: true,
+    // }
   },
   mocha: {
   },
