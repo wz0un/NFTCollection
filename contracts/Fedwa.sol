@@ -13,15 +13,15 @@ contract Fedwa is ERC721Enumerable, Ownable {
     bool public presaleActive = false;
 
     // Reserved for the team, customs, giveaways, collabs and so on.
-    uint256 public reserved = 150;
+    uint256 public reserved = 20;
 
     // Price of each token
-    uint256 public initial_price = 0.04 ether;
+    uint256 public initial_price = 0.004 ether;
     uint256 public price;
 
     // Maximum limit of tokens that can ever exist
     uint256 public constant MAX_SUPPLY = 20;
-    uint256 public constant MAX_PRESALE_SUPPLY = 500;
+    uint256 public constant MAX_PRESALE_SUPPLY = 20;
     uint256 public constant MAX_MINT_PER_TX = 20;
 
     // The base link that leads to the image / video of the token

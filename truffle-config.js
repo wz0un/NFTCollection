@@ -24,14 +24,20 @@ module.exports = {
       network_id: 1,
       skipDryRun: true,
     },
-    // Hay que revisarlo
-    // poligon: {
-    //   provider: function () {
-    //     return new HDWalletProvider(process.env.PRIVATE_KEY, process.env.MAINNET_RPC_URL);
-    //   },
-    //   network_id: 134,
-    //   skipDryRun: true,
-    // }
+    mumbai: {
+      provider: function() {
+        return new HDWalletProvider(process.env.PRIVATE_KEY, process.env.MUMBAI_RPC_URL)
+      },
+      network_id: 80001,
+      skipDryRun: true,
+    },
+    matic: {
+      network_id: 137,
+      skipDryRun: true,
+      provider: function() {
+        return new HDWalletProvider(process.env.PRIVATE_KEY, process.env.MATIC_RPC_URL)
+      },
+    },
   },
   mocha: {
   },
