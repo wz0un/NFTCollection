@@ -1,8 +1,8 @@
 const NETWORK_ID = 80001
 var NFT_PRICE = null
-var PRESALE_PRICE = null
-var MAX_SUPPLY = null
-var MAX_PRESALE_SUPPLY = null
+var PRESALE_PRICE = 20
+var MAX_SUPPLY = 20
+var MAX_PRESALE_SUPPLY = 20
 var contract
 var accounts
 var web3
