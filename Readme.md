@@ -16,3 +16,5 @@
 5. `truffle deploy --network rinkeby`
 6. Copy `./bruild/MyNFTCollection.json` to `./client/contracts/MyNFTCollection.json`
 7. Deploy the `./client` directory to a public frontend server
+8. Install `npm install -D truffle-plugin-verify`
+9. Verify contract `truffle run verify MyNFTCollection --network rinkeby`

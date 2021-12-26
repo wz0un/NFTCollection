@@ -46,6 +46,12 @@ module.exports = {
       version: "0.8.9",
     }
   },
+  plugins: [
+    'truffle-plugin-verify'
+  ],
+  api_keys: {
+    polygonscan: process.env.POLYGONSCAN_API_KEY
+  },
   db: {
     enabled: false
   }
