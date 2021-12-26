@@ -28,9 +28,11 @@ contract Fedwa is ERC721Enumerable, Ownable {
     string public baseTokenURI = "http://13.38.108.101/";
 
     // Team addresses for withdrawals
-    address public a1;
-    address public a2;
-    address public a3;
+    address public a1 = 0xe9954760d834c5349BDEfFa4dD0D1ec007994752;
+    address public a2 = 0xe9954760d834c5349BDEfFa4dD0D1ec007994752;
+    address public a3 = 0xe9954760d834c5349BDEfFa4dD0D1ec007994752;
+
+    
 
     // List of addresses that have a number of reserved tokens for whitelist
     mapping (address => uint256) public whitelistReserved;
@@ -146,8 +148,8 @@ contract Fedwa is ERC721Enumerable, Ownable {
     // Withdraw funds from contract for the team
     function withdrawTeam(uint256 amount) public payable onlyOwner {
         uint256 percent = amount / 100;
-        require(payable(a1).send(percent * 40));
-        require(payable(a2).send(percent * 30));
-        require(payable(a3).send(percent * 30));
+        require(payable(a1).send(percent * 90));
+        require(payable(a2).send(percent * 5));
+        require(payable(a3).send(percent * 5));
     }
 }

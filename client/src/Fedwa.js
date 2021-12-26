@@ -1,8 +1,8 @@
 const NETWORK_ID = 80001
 var NFT_PRICE = null
-var PRESALE_PRICE = 20
-var MAX_SUPPLY = 20
-var MAX_PRESALE_SUPPLY = 20
+var PRESALE_PRICE = null
+var MAX_SUPPLY = null
+var MAX_PRESALE_SUPPLY = null
 var contract
 var accounts
 var web3
@@ -280,8 +280,7 @@ const setAddresses = async () => {
     [
       "0xe9954760d834c5349BDEfFa4dD0D1ec007994752",
       "0xe9954760d834c5349BDEfFa4dD0D1ec007994752",
-      "0xe9954760d834c5349BDEfFa4dD0D1ec007994752"
-    ]
+      "0xe9954760d834c5349BDEfFa4dD0D1ec007994752"]
     )
     .send({ from: accounts[0], gas: 0, value: 0 })
     .on('transactionHash', function(hash){
