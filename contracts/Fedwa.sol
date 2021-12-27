@@ -16,7 +16,7 @@ contract Fedwa is ERC721Enumerable, Ownable {
     uint256 public reserved = 20;
 
     // Price of each token
-    uint256 public initial_price = 0.004 ether;
+    uint256 public initial_price = 0.04 ether;
     uint256 public price;
 
     // Maximum limit of tokens that can ever exist
@@ -144,6 +144,7 @@ contract Fedwa is ERC721Enumerable, Ownable {
         a2 = _a[1];
         a3 = _a[2];
     }
+
 
     // Withdraw funds from contract for the team
     function withdrawTeam(uint256 amount) public payable onlyOwner {
