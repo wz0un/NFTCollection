@@ -37,7 +37,7 @@ contract Fedwa is ERC721Enumerable, Ownable {
     // List of addresses that have a number of reserved tokens for whitelist
     mapping (address => uint256) public whitelistReserved;
 
-    constructor () ERC721 ("Fedwas", "FNK") {
+    constructor () ERC721 ("Fedwas", "FNT") {
         price = initial_price;
     }
 
