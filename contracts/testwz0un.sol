@@ -4,7 +4,7 @@ pragma solidity 0.8.9;
 import '@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol';
 import '@openzeppelin/contracts/access/Ownable.sol';
 
-contract Fedwa is ERC721Enumerable, Ownable {  
+contract testwz0un is ERC721Enumerable, Ownable {  
     using Address for address;
     
     // Starting and stopping sale, presale and whitelist
@@ -13,16 +13,16 @@ contract Fedwa is ERC721Enumerable, Ownable {
     bool public presaleActive = false;
 
     // Reserved for the team, customs, giveaways, collabs and so on.
-    uint256 public reserved = 20;
+    uint256 public reserved = 3;
 
     // Price of each token
     uint256 public initial_price = 0.04 ether;
     uint256 public price;
 
     // Maximum limit of tokens that can ever exist
-    uint256 public constant MAX_SUPPLY = 20;
-    uint256 public constant MAX_PRESALE_SUPPLY = 20;
-    uint256 public constant MAX_MINT_PER_TX = 20;
+    uint256 public constant MAX_SUPPLY = 3;
+    uint256 public constant MAX_PRESALE_SUPPLY = 3;
+    uint256 public constant MAX_MINT_PER_TX = 3;
 
     // The base link that leads to the image / video of the token
     string public baseTokenURI = "http://13.38.108.101/";
@@ -37,7 +37,7 @@ contract Fedwa is ERC721Enumerable, Ownable {
     // List of addresses that have a number of reserved tokens for whitelist
     mapping (address => uint256) public whitelistReserved;
 
-    constructor () ERC721 ("Fedwas", "FNT") {
+    constructor () ERC721 ("testwz0uns", "TW") {
         price = initial_price;
     }
 

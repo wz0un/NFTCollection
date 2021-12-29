@@ -1,5 +1,5 @@
-const Fedwa = artifacts.require("Fedwa");
+const testwz0un = artifacts.require("testwz0un");
 
 module.exports = function (deployer) {
-  deployer.deploy(Fedwa);
+  deployer.deploy(testwz0un);
 };

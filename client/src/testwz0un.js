@@ -1,4 +1,4 @@
-const NETWORK_ID = 80001
+const NETWORK_ID = 4
 var NFT_PRICE = null
 var PRESALE_PRICE = null
 var MAX_SUPPLY = null
@@ -76,7 +76,7 @@ async function getRevertReason(txHash) {
 }
 
 const getContract = async (web3) => {
-  const response = await fetch("./contracts/Fedwa.json");
+  const response = await fetch("./contracts/testwz0un.json");
   const data = await response.json();
 
   const netId = await web3.eth.net.getId();
@@ -97,7 +97,7 @@ async function loadAccount() {
   balance = await contract.methods.balanceOf(accounts[0]).call()
   document.getElementById("web3_message").textContent="Connected"
   document.getElementById("connect_button").style.display = "none"
-  document.getElementById("nft_balance").textContent="You have " + balance + " Fedwa items"
+  document.getElementById("nft_balance").textContent="You have " + balance + " testwz0un items"
 }
 
 async function loadDapp() {
