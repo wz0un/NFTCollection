@@ -49,12 +49,12 @@ module.exports = {
   plugins: [
     'truffle-plugin-verify'
   ],
-  // api_keys: {
-  //   polygonscan: process.env.POLYGONSCAN_API_KEY
-  // },
   api_keys: {
-    etherscan: process.env.ETHERSCAN_API_KEY
+    polygonscan: process.env.POLYGONSCAN_API_KEY
   },
+  // api_keys: {
+  //   etherscan: process.env.ETHERSCAN_API_KEY
+  // },
   db: {
     enabled: false
   }

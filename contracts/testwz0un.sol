@@ -13,24 +13,24 @@ contract testwz0un is ERC721Enumerable, Ownable {
     bool public presaleActive = false;
 
     // Reserved for the team, customs, giveaways, collabs and so on.
-    uint256 public reserved = 3;
+    uint256 public reserved = 5;
 
     // Price of each token
-    uint256 public initial_price = 0.04 ether;
+    uint256 public initial_price = 0.001 ether;
     uint256 public price;
 
     // Maximum limit of tokens that can ever exist
-    uint256 public constant MAX_SUPPLY = 3;
-    uint256 public constant MAX_PRESALE_SUPPLY = 3;
-    uint256 public constant MAX_MINT_PER_TX = 3;
+    uint256 public constant MAX_SUPPLY = 5;
+    uint256 public constant MAX_PRESALE_SUPPLY = 5;
+    uint256 public constant MAX_MINT_PER_TX = 5;
 
     // The base link that leads to the image / video of the token
     string public baseTokenURI = "http://13.38.108.101/";
 
     // Team addresses for withdrawals
-    address public a1 = 0xe9954760d834c5349BDEfFa4dD0D1ec007994752;
-    address public a2 = 0xe9954760d834c5349BDEfFa4dD0D1ec007994752;
-    address public a3 = 0xe9954760d834c5349BDEfFa4dD0D1ec007994752;
+    address public a1 = 0x6C71Ac976F811eA44c6eAE4a3Ea6C4435c74E52d;
+    address public a2 = 0x6C71Ac976F811eA44c6eAE4a3Ea6C4435c74E52d;
+    address public a3 = 0x6C71Ac976F811eA44c6eAE4a3Ea6C4435c74E52d;
 
     
 
