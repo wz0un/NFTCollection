@@ -1,5 +1,5 @@
-const testwz0un = artifacts.require("testwz0un");
+const Minerva = artifacts.require("Minerva");
 
 module.exports = function (deployer) {
-  deployer.deploy(testwz0un);
+  deployer.deploy(Minerva);
 };

@@ -4,7 +4,7 @@ pragma solidity 0.8.9;
 import '@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol';
 import '@openzeppelin/contracts/access/Ownable.sol';
 
-contract testwz0un is ERC721Enumerable, Ownable {  
+contract Minerva is ERC721Enumerable, Ownable {  
     using Address for address;
     
     // Starting and stopping sale, presale and whitelist
@@ -13,31 +13,30 @@ contract testwz0un is ERC721Enumerable, Ownable {
     bool public presaleActive = false;
 
     // Reserved for the team, customs, giveaways, collabs and so on.
-    uint256 public reserved = 5;
+    uint256 public reserved = 0;
 
     // Price of each token
-    uint256 public initial_price = 0.001 ether;
+    uint256 public initial_price = 0.02 ether;
     uint256 public price;
 
     // Maximum limit of tokens that can ever exist
-    uint256 public constant MAX_SUPPLY = 5;
-    uint256 public constant MAX_PRESALE_SUPPLY = 5;
-    uint256 public constant MAX_MINT_PER_TX = 5;
+    uint256 public constant MAX_SUPPLY = 500;
+    uint256 public constant MAX_PRESALE_SUPPLY = 500;
+    uint256 public constant MAX_MINT_PER_TX = 500;
 
     // The base link that leads to the image / video of the token
-    string public baseTokenURI = "http://13.38.108.101/";
+    string public baseTokenURI = "https://mint-minirva.womentothefront.art/";
 
     // Team addresses for withdrawals
     address public a1 = 0x6C71Ac976F811eA44c6eAE4a3Ea6C4435c74E52d;
     address public a2 = 0x6C71Ac976F811eA44c6eAE4a3Ea6C4435c74E52d;
-    address public a3 = 0x6C71Ac976F811eA44c6eAE4a3Ea6C4435c74E52d;
 
     
 
     // List of addresses that have a number of reserved tokens for whitelist
     mapping (address => uint256) public whitelistReserved;
 
-    constructor () ERC721 ("testwz0uns", "TW") {
+    constructor () ERC721 ("Minervas", "TW") {
         price = initial_price;
     }
 
@@ -142,7 +141,6 @@ contract testwz0un is ERC721Enumerable, Ownable {
     function setAddresses(address[] memory _a) public onlyOwner {
         a1 = _a[0];
         a2 = _a[1];
-        a3 = _a[2];
     }
 
 
@@ -150,7 +148,6 @@ contract testwz0un is ERC721Enumerable, Ownable {
     function withdrawTeam(uint256 amount) public payable onlyOwner {
         uint256 percent = amount / 100;
         require(payable(a1).send(percent * 90));
-        require(payable(a2).send(percent * 5));
-        require(payable(a3).send(percent * 5));
+        require(payable(a2).send(percent * 10));
     }
 }
