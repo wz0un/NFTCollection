@@ -25,18 +25,18 @@ contract Minerva is ERC721Enumerable, Ownable {
     uint256 public constant MAX_MINT_PER_TX = 500;
 
     // The base link that leads to the image / video of the token
-    string public baseTokenURI = "https://mint-minirva.womentothefront.art/";
+    string public baseTokenURI = "https://minerva-api.womentothefront.art/";
 
     // Team addresses for withdrawals
-    address public a1 = 0x6C71Ac976F811eA44c6eAE4a3Ea6C4435c74E52d;
-    address public a2 = 0x6C71Ac976F811eA44c6eAE4a3Ea6C4435c74E52d;
+    address public a1 = 0x87a5c4F871960a6B1e260d1e50F434d9Ee5f5FD6;
+    address public a2 = 0xf2d5F10062e6635CF221a197E7F8481e12C7F1BD;
 
     
 
     // List of addresses that have a number of reserved tokens for whitelist
     mapping (address => uint256) public whitelistReserved;
 
-    constructor () ERC721 ("Minervas", "TW") {
+    constructor () ERC721 ("Minervas", "MN") {
         price = initial_price;
     }
 
