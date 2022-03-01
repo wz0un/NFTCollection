@@ -1,5 +1,5 @@
-const Minerva = artifacts.require("Minerva");
+const Camel = artifacts.require("Camel");
 
 module.exports = function (deployer) {
-  deployer.deploy(Minerva);
+  deployer.deploy(Camel);
 };

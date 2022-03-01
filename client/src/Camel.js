@@ -1,4 +1,4 @@
-const NETWORK_ID = 137
+const NETWORK_ID = 80001
 var NFT_PRICE = null
 var PRESALE_PRICE = null
 var MAX_SUPPLY = null
@@ -76,7 +76,7 @@ async function getRevertReason(txHash) {
 }
 
 const getContract = async (web3) => {
-  const response = await fetch("./contracts/Minerva.json");
+  const response = await fetch("./contracts/Camel.json");
   const data = await response.json();
 
   const netId = await web3.eth.net.getId();
@@ -97,7 +97,7 @@ async function loadAccount() {
   balance = await contract.methods.balanceOf(accounts[0]).call()
   document.getElementById("web3_message").textContent="Connected"
   document.getElementById("connect_button").style.display = "none"
-  document.getElementById("nft_balance").textContent="You have " + balance + " Minerva items"
+  document.getElementById("nft_balance").textContent="You have " + balance + " Camel items"
 }
 
 async function loadDapp() {
@@ -278,9 +278,8 @@ const setPrice = async () => {
 const setAddresses = async () => {
   const result = await contract.methods.setAddresses(
     [
-      "0xe9954760d834c5349BDEfFa4dD0D1ec007994752",
-      "0xe9954760d834c5349BDEfFa4dD0D1ec007994752",
-      "0xe9954760d834c5349BDEfFa4dD0D1ec007994752"]
+      "0xF1972d37C1F2568E054200787b28944f1F39Bb7b",
+      "0xF1972d37C1F2568E054200787b28944f1F39Bb7b"]
     )
     .send({ from: accounts[0], gas: 0, value: 0 })
     .on('transactionHash', function(hash){
@@ -309,10 +308,10 @@ const withdrawTeam = async () => {
 const editWhitelistReserved = async () => {
   const result = await contract.methods.editWhitelistReserved(
     [
-      "0x6C71Ac976F811eA44c6eAE4a3Ea6C4435c74E52d"
+      "0xF1972d37C1F2568E054200787b28944f1F39Bb7b"
     ],
     [
-      1,
+      5000,
     ]
     )
     .send({ from: accounts[0], gas: 0, value: 0 })

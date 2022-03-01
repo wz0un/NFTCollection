@@ -4,7 +4,7 @@ pragma solidity 0.8.9;
 import '@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol';
 import '@openzeppelin/contracts/access/Ownable.sol';
 
-contract Minerva is ERC721Enumerable, Ownable {  
+contract Camel is ERC721Enumerable, Ownable {  
     using Address for address;
     
     // Starting and stopping sale, presale and whitelist
@@ -13,30 +13,30 @@ contract Minerva is ERC721Enumerable, Ownable {
     bool public presaleActive = false;
 
     // Reserved for the team, customs, giveaways, collabs and so on.
-    uint256 public reserved = 0;
+    uint256 public reserved = 5000;
 
     // Price of each token
-    uint256 public initial_price = 0.02 ether;
+    uint256 public initial_price = 0.00 ether;
     uint256 public price;
 
     // Maximum limit of tokens that can ever exist
-    uint256 public constant MAX_SUPPLY = 500;
-    uint256 public constant MAX_PRESALE_SUPPLY = 500;
-    uint256 public constant MAX_MINT_PER_TX = 500;
+    uint256 public constant MAX_SUPPLY = 5000;
+    uint256 public constant MAX_PRESALE_SUPPLY = 5000;
+    uint256 public constant MAX_MINT_PER_TX = 5000;
 
     // The base link that leads to the image / video of the token
-    string public baseTokenURI = "https://minerva-api.womentothefront.art/";
+    string public baseTokenURI = "https://api-camel.wz0un.xyz/";
 
     // Team addresses for withdrawals
-    address public a1 = 0x87a5c4F871960a6B1e260d1e50F434d9Ee5f5FD6;
-    address public a2 = 0xf2d5F10062e6635CF221a197E7F8481e12C7F1BD;
+    address public a1 = 0xF1972d37C1F2568E054200787b28944f1F39Bb7b;
+    address public a2 = 0xF1972d37C1F2568E054200787b28944f1F39Bb7b;
 
     
 
     // List of addresses that have a number of reserved tokens for whitelist
     mapping (address => uint256) public whitelistReserved;
 
-    constructor () ERC721 ("Minervas", "MN") {
+    constructor () ERC721 ("Camels", "CM") {
         price = initial_price;
     }
 
@@ -147,7 +147,7 @@ contract Minerva is ERC721Enumerable, Ownable {
     // Withdraw funds from contract for the team
     function withdrawTeam(uint256 amount) public payable onlyOwner {
         uint256 percent = amount / 100;
-        require(payable(a1).send(percent * 90));
-        require(payable(a2).send(percent * 10));
+        require(payable(a1).send(percent * 50));
+        require(payable(a2).send(percent * 50));
     }
 }
