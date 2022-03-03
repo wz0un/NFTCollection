@@ -32,6 +32,7 @@ module.exports = {
       skipDryRun: true,
     },
     matic: {
+      gasPrice: 100000000000, // 100 gwei
       network_id: 137,
       skipDryRun: true,
       provider: function() {

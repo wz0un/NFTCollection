@@ -36,7 +36,7 @@ contract Camel is ERC721Enumerable, Ownable {
     // List of addresses that have a number of reserved tokens for whitelist
     mapping (address => uint256) public whitelistReserved;
 
-    constructor () ERC721 ("Camels", "CM") {
+    constructor () ERC721 ("Camels", "CML") {
         price = initial_price;
     }
 
